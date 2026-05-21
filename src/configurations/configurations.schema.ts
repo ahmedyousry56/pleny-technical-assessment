@@ -12,4 +12,8 @@ export const configurationsSchema = Joi.object({
 
     // DATABASE CONFIGURATIONS
     MONGODB_URI: Joi.string().required(),
+    MAX_DB_CONNECTIONS: Joi.number().default(10),
+    MIN_DB_CONNECTIONS: Joi.number().default(2),
+    DB_RETRY_ATTEMPTS: Joi.number().default(5),
+    DB_RETRY_DELAY: Joi.number().default(2000),
 });

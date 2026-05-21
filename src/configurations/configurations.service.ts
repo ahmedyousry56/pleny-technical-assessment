@@ -26,10 +26,10 @@ export class ConfigurationsService {
         return {
             uri: this.ConfigService.getOrThrow('MONGODB_URI'),
             options: {
-                maxPoolSize: 15,
-                minPoolSize: 2,
-                retryAttempts: 5,
-                retryDelay: 2000,
+                maxPoolSize: this.ConfigService.get('MAX_DB_CONNECTIONS', 10),
+                minPoolSize: this.ConfigService.get('MIN_DB_CONNECTIONS', 2),
+                retryAttempts: this.ConfigService.get('DB_RETRY_ATTEMPTS', 5),
+                retryDelay: this.ConfigService.get('DB_RETRY_DELAY', 2000),
             },
         };
     }
