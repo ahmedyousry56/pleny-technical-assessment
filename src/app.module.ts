@@ -3,6 +3,7 @@ import { ConfigurationsModule } from './configurations/configurations.module';
 import { AcceptLanguageResolver, HeaderResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
 import * as path from 'path';
 import { ConfigurationsService } from './configurations/configurations.service';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
@@ -18,6 +19,13 @@ import { ConfigurationsService } from './configurations/configurations.service';
         AcceptLanguageResolver,
         new HeaderResolver(['x-lang']),
       ],
+      inject: [ConfigurationsService],
+    }),
+    MongooseModule.forRootAsync({
+      useFactory: (configurationsService: ConfigurationsService) => ({
+        uri: configurationsService.database.uri,
+        ...configurationsService.database.options,
+      }),
       inject: [ConfigurationsService],
     }),
     ConfigurationsModule
