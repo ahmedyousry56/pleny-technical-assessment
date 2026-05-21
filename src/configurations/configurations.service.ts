@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { MongooseModuleFactoryOptions } from '@nestjs/mongoose';
 
 @Injectable()
 export class ConfigurationsService {
@@ -15,6 +16,21 @@ export class ConfigurationsService {
             port: this.ConfigService.get('PORT', 3000),
             environment: this.ConfigService.get('ENVIRONMENT', 'development'),
             defaultLanguage: this.ConfigService.get('DEFAULT_LANGUAGE', 'en'),
+        };
+    }
+    
+    get database(): {
+        uri: string;
+        options: MongooseModuleFactoryOptions;
+    } {
+        return {
+            uri: this.ConfigService.getOrThrow('MONGODB_URI'),
+            options: {
+                maxPoolSize: 15,
+                minPoolSize: 2,
+                retryAttempts: 5,
+                retryDelay: 2000,
+            },
         };
     }
 }
