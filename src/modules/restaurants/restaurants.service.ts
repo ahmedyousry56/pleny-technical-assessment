@@ -1,9 +1,14 @@
-import { Injectable } from '@nestjs/common';
+import {
+  Injectable,
+  ConflictException,
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Restaurant, RestaurantDocument } from './schemas/restaurant.schema.js';
+import { CreateRestaurantDto } from './dto/create-restaurant.dto.js';
 import { I18nService } from 'nestjs-i18n';
 import { I18nTranslations } from '../../generated/i18n.generated.js';
+import { ICreateRestaurantResponse } from 'src/interfaces/restaurants.interface.js';
 
 @Injectable()
 export class RestaurantsService {
@@ -13,4 +18,28 @@ export class RestaurantsService {
     private readonly I18nService: I18nService<I18nTranslations>,
   ) {}
 
+  async create(dto: CreateRestaurantDto): Promise<ICreateRestaurantResponse> {
+    const existingRestaurant = await this.RestaurantModel.findOne({ slug: dto.slug }).exec();
+    if (existingRestaurant) {
+      throw new ConflictException(this.I18nService.t('restaurants.slug_exists', { args: { slug: dto.slug } }));
+    }
+    const restaurant = new this.RestaurantModel({
+      name: dto.name,
+      slug: dto.slug,
+      cuisines: dto.cuisines,
+      location: {
+        type: 'Point',
+        coordinates: [dto.location.longitude, dto.location.latitude],
+      },
+    });
+
+    const savedRestaurant = await restaurant.save();
+    if (!savedRestaurant) {
+      throw new Error(this.I18nService.t('common.something_went_wrong'));
+    }
+    return {
+      message: this.I18nService.t('restaurants.created_successfully'),
+      _id: savedRestaurant._id.toString(),
+    };
+  }
 }
