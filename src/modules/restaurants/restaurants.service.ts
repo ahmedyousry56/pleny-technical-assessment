@@ -11,17 +11,48 @@ import { ListRestaurantsDto } from './dto/list-restaurants.dto.js';
 import { NearbyRestaurantsDto } from './dto/nearby-restaurants.dto.js';
 import { I18nService } from 'nestjs-i18n';
 import { I18nTranslations } from '@/generated/i18n.generated.js';
-import { ICreateRestaurantResponse } from 'src/interfaces/restaurants.interface.js';
+import { CreateRestaurantResponseDto, RestaurantResponseDto } from './dto/response-restaurants.dto.js';
+import { MainService } from '../../shared/base/main.service.js';
+import { PaginatedResponseDto } from '../../shared/dto/pagination.dto.js';
 
 @Injectable()
-export class RestaurantsService {
+export class RestaurantsService extends MainService {
+
   constructor(
     @InjectModel(Restaurant.name)
     private readonly RestaurantModel: Model<RestaurantDocument>,
     private readonly I18nService: I18nService<I18nTranslations>,
-  ) {}
+  ) {
+    super()
+  }
 
-  async create(dto: CreateRestaurantDto): Promise<ICreateRestaurantResponse> {
+  async findAll<T = RestaurantResponseDto, Q extends ListRestaurantsDto = ListRestaurantsDto>(query: Q): Promise<PaginatedResponseDto<T>> {
+    const { cuisine, page = 1, limit = 20 } = query;
+
+    const filter: Record<string, any> = {};
+    if (cuisine) {
+      filter.cuisines = cuisine;
+    }
+
+    const skip = (page - 1) * limit;
+
+    const [data, total] = await Promise.all([
+      this.RestaurantModel.find<T>(filter).skip(skip).limit(limit).exec(),
+      this.RestaurantModel.countDocuments(filter).exec(),
+    ]);
+
+    return {
+      data,
+      meta: {
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+      },
+    };
+  }
+
+  async create(dto: CreateRestaurantDto): Promise<CreateRestaurantResponseDto> {
     const existingRestaurant = await this.RestaurantModel.findOne({ slug: dto.slug }).exec();
     if (existingRestaurant) {
       throw new ConflictException(this.I18nService.t('restaurants.slug_exists', { args: { slug: dto.slug } }));
@@ -59,6 +90,7 @@ export class RestaurantsService {
 
     return restaurant;
   }
+
 
   async findNearby(query: NearbyRestaurantsDto) {
     const { longitude, latitude, maxDistance = 1000 } = query;
