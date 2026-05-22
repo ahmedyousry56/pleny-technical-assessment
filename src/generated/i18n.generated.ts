@@ -19,8 +19,20 @@ export type I18nTranslations = {
         "slug_required": string;
         "location_required": string;
     };
-    "validations": {
-        "something_went_wrong": string;
+    "users": {
+        "not_found": string;
+        "already_following": string;
+        "follow_not_found": string;
+        "unfollowed_successfully": string;
+        "name_required": string;
+        "name_string": string;
+        "cuisines_min": string;
+        "cuisine_invalid": string;
+        "restaurant_id_required": string;
+        "restaurant_id_invalid": string;
+        "created_successfully": string;
+        "followed_successfully": string;
+        "follow_failed": string;
     };
 };
 /* prettier-ignore */
