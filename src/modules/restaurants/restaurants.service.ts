@@ -1,9 +1,10 @@
 import {
   Injectable,
+  NotFoundException,
   ConflictException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 import { Restaurant, RestaurantDocument } from './schemas/restaurant.schema.js';
 import { CreateRestaurantDto } from './dto/create-restaurant.dto.js';
 import { I18nService } from 'nestjs-i18n';
@@ -42,4 +43,19 @@ export class RestaurantsService {
       _id: savedRestaurant._id.toString(),
     };
   }
+
+  async findByIdOrSlug(idOrSlug: string): Promise<RestaurantDocument> {
+    const isObjectId = Types.ObjectId.isValid(idOrSlug);
+
+    const restaurant = isObjectId
+      ? await this.RestaurantModel.findById(idOrSlug).exec()
+      : await this.RestaurantModel.findOne({ slug: idOrSlug }).exec();
+
+    if (!restaurant) {
+      throw new NotFoundException(this.I18nService.t('restaurants.not_found', { args: { idOrSlug } }));
+    }
+
+    return restaurant;
+  }
+
 }
