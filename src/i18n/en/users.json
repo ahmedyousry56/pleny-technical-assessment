@@ -1,0 +1,15 @@
+{
+  "not_found": "User \"{id}\" not found",
+  "already_following": "User is already following this restaurant",
+  "follow_not_found": "Follow relationship not found",
+  "unfollowed_successfully": "Successfully unfollowed restaurant",
+  "name_required": "User full name is required",
+  "name_string": "User full name must be a string",
+  "cuisines_min": "You must select at least one favorite cuisine",
+  "cuisine_invalid": "Invalid cuisine. Allowed values: {cuisines}",
+  "restaurant_id_required": "Restaurant ID is required",
+  "restaurant_id_invalid": "Invalid Restaurant ID format",
+  "created_successfully": "User created successfully",
+  "followed_successfully": "User followed restaurant successfully",
+  "follow_failed": "Failed to follow restaurant, Please try again later"
+}

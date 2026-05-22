@@ -1,0 +1,15 @@
+{
+  "not_found": "المستخدم \"{id}\" غير موجود",
+  "already_following": "المستخدم يتابع هذا المطعم بالفعل",
+  "follow_not_found": "علاقة المتابعة غير موجودة",
+  "unfollowed_successfully": "تم إلغاء متابعة المطعم بنجاح",
+  "name_required": "الاسم الكامل للمستخدم مطلوب",
+  "name_string": "يجب أن يكون الاسم الكامل نصاً",
+  "cuisines_min": "يجب اختيار مطبخ مفضل واحد على الأقل",
+  "cuisine_invalid": "مطبخ غير صالح. القيم المسموح بها: {cuisines}",
+  "restaurant_id_required": "معرف المطعم مطلوب",
+  "restaurant_id_invalid": "صيغة معرف المطعم غير صالحة",
+  "created_successfully": "تم إنشاء المستخدم بنجاح",
+  "followed_successfully": "تم متابعة المطعم بنجاح",
+  "follow_failed": "فشل في متابعة المطعم، يرجى المحاولة مرة أخرى لاحقاً"
+}
