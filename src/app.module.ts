@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigurationsModule } from './configurations/configurations.module';
-import { AcceptLanguageResolver, HeaderResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
+import { AcceptLanguageResolver, HeaderResolver, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import { ConfigurationsService } from './configurations/configurations.service';
 import { MongooseModule } from '@nestjs/mongoose';
+import { RestaurantsModule } from './modules/restaurants/restaurants.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { MongooseModule } from '@nestjs/mongoose';
           path: path.join(__dirname, '/i18n/'),
           watch: true,
         },
+        typesOutputPath: path.join(__dirname, '../src/generated/i18n.generated.ts'),
       }),
       resolvers: [
         AcceptLanguageResolver,
@@ -28,7 +30,8 @@ import { MongooseModule } from '@nestjs/mongoose';
       }),
       inject: [ConfigurationsService],
     }),
-    ConfigurationsModule
+    ConfigurationsModule,
+    RestaurantsModule,
   ],
   controllers: [],
   providers: [],

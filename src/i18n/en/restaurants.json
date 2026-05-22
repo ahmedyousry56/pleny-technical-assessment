@@ -1,0 +1,11 @@
+{
+    "created_successfully": "Restaurant created successfully",
+    "not_found": "Restaurant \"{idOrSlug}\" not found",
+    "slug_exists": "Restaurant with slug \"{slug}\" already exists",
+    "cuisines_min": "A restaurant must have at least 1 cuisine",
+    "cuisines_max": "A restaurant must have at most 3 cuisines",
+    "cuisine_invalid": "cuisine must be one of the available cuisines \"{cuisines}\"",
+    "name_required": "Restaurant name is required",
+    "slug_required": "Restaurant slug is required",
+    "location_required": "Restaurant location is required"
+}
