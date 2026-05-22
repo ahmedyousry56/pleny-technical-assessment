@@ -7,8 +7,10 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { Restaurant, RestaurantDocument } from './schemas/restaurant.schema.js';
 import { CreateRestaurantDto } from './dto/create-restaurant.dto.js';
+import { ListRestaurantsDto } from './dto/list-restaurants.dto.js';
+import { NearbyRestaurantsDto } from './dto/nearby-restaurants.dto.js';
 import { I18nService } from 'nestjs-i18n';
-import { I18nTranslations } from '../../generated/i18n.generated.js';
+import { I18nTranslations } from '@/generated/i18n.generated.js';
 import { ICreateRestaurantResponse } from 'src/interfaces/restaurants.interface.js';
 
 @Injectable()
@@ -58,4 +60,30 @@ export class RestaurantsService {
     return restaurant;
   }
 
+  async findNearby(query: NearbyRestaurantsDto) {
+    const { longitude, latitude, maxDistance = 1000 } = query;
+
+    const restaurants = await this.RestaurantModel
+      .find({
+        location: {
+          $nearSphere: {
+            $geometry: {
+              type: 'Point',
+              coordinates: [longitude, latitude],
+            },
+            $maxDistance: maxDistance
+          },
+        },
+      })
+      .exec();
+
+    return {
+      data: restaurants,
+      meta: {
+        total: restaurants.length,
+        origin: { longitude, latitude },
+        maxDistance,
+      },
+    };
+  }
 }
