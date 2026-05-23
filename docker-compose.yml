@@ -13,5 +13,17 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin # Simulated username
       - MONGO_INITDB_ROOT_PASSWORD=password # Simulated password
 
+  api:
+    build: .
+    container_name: restaurant-api
+    ports:
+      - "3040:3040"
+    environment:
+      - PORT=3040
+      - MONGODB_URI=mongodb://admin:password@mongodb:27017/plenydb?authSource=admin
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
 volumes:
   mongodb_data:
