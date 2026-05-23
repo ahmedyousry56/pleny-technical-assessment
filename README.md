@@ -42,19 +42,21 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
 
-## Run tests
+# docker
+$ docker-compose up --build
 
-```bash
-# unit tests
-$ npm run test
+# transform brands
+$ npm run brands:transform
 
-# e2e tests
-$ npm run test:e2e
+# seed brands
+$ npm run brands:seed
 
-# test coverage
-$ npm run test:cov
+# seed exports
+$ npm run exports:seed
+
+# seed all
+$ npm run seed:all
 ```
 
 ## Deployment
