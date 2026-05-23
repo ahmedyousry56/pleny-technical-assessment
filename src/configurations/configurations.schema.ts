@@ -9,6 +9,7 @@ export const configurationsSchema = Joi.object({
     PORT: Joi.number().default(3000),
     NODE_ENV: Joi.string().valid('development', 'production', 'test').default('development'),
     DEFAULT_LANGUAGE: Joi.string().valid('en', 'ar').default('en'),
+    ALLOWED_ORIGINS: Joi.string().default('*'),
 
     // DATABASE CONFIGURATIONS
     MONGODB_URI: Joi.string().required(),

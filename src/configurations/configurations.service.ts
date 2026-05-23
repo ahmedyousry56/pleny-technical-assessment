@@ -16,6 +16,7 @@ export class ConfigurationsService {
             port: this.ConfigService.get('PORT', 3000),
             environment: this.ConfigService.get('ENVIRONMENT', 'development'),
             defaultLanguage: this.ConfigService.get('DEFAULT_LANGUAGE', 'en'),
+            allowedOrigins: this.ConfigService.get('ALLOWED_ORIGINS', '*').split(','),
         };
     }
     

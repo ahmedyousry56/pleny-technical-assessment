@@ -10,6 +10,11 @@ async function bootstrap() {
 
   const configurations = app.get(ConfigurationsService);
 
+  app.enableCors({
+    origin: configurations.app.allowedOrigins,
+    credentials: true,
+  });
+
   app.useGlobalPipes(
     new I18nValidationPipe({
       transform: true,
