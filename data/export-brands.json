@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "66069ff93007b006635c0245",
+    "brandName": "Ward, Hand and Ortiz",
+    "headquarters": "Jastside",
+    "numberOfLocations": 2132,
+    "yearFounded": 1980
+  },
+  {
+    "_id": "66069ff93007b006635c0246",
+    "brandName": "Ergonomic Frozen Bacon",
+    "yearFounded": 1980,
+    "headquarters": "Gavinstead",
+    "numberOfLocations": 1
+  },
+  {
+    "_id": "66069ff93007b006635c0247",
+    "brandName": "Breitenberg, Greenholt and Ledner",
+    "yearFounded": 1982,
+    "headquarters": "Fort Lenna",
+    "numberOfLocations": 1000
+  },
+  {
+    "_id": "66069ff93007b006635c0248",
+    "brandName": "Modern Granite Fish",
+    "yearFounded": 1980,
+    "headquarters": "Kundebury",
+    "numberOfLocations": 1
+  },
+  {
+    "_id": "66069ff93007b006635c0249",
+    "brandName": "Gorgeous Granite Pizza",
+    "headquarters": "Jonesborough",
+    "numberOfLocations": 1,
+    "yearFounded": 1980
+  },
+  {
+    "_id": "66069ff93007b006635c024a",
+    "brandName": "Oriental Plastic Pants",
+    "yearFounded": 1980,
+    "headquarters": "Wardfort",
+    "numberOfLocations": 1
+  },
+  {
+    "_id": "66069ff93007b006635c024b",
+    "brandName": "Refined Granite Towels",
+    "yearFounded": 1980,
+    "headquarters": "Lemkeland",
+    "numberOfLocations": 1
+  },
+  {
+    "_id": "66069ff93007b006635c024c",
+    "brandName": "Corkery Inc",
+    "yearFounded": 1980,
+    "numberOfLocations": 9200,
+    "headquarters": "DuBuqueburgh"
+  },
+  {
+    "_id": "66069ff93007b006635c024d",
+    "yearFounded": 1980,
+    "headquarters": "West Mylesboro",
+    "numberOfLocations": 1,
+    "brandName": "Licensed Concrete Tuna"
+  },
+  {
+    "_id": "66069ff93007b006635c024e",
+    "brandName": "Generic Cotton Pizza",
+    "yearFounded": 1980,
+    "headquarters": "North Ralphport",
+    "numberOfLocations": 1
+  },
+  {
+    "_id": "6a11840959693f14ff320dd9",
+    "brandName": "Sunrise Coffee Co.",
+    "yearFounded": 2015,
+    "headquarters": "Austin, Texas",
+    "numberOfLocations": 48,
+    "createdAt": "2026-05-23T10:40:09.741Z",
+    "updatedAt": "2026-05-23T10:40:09.741Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320dda",
+    "brandName": "NovaBurger",
+    "yearFounded": 2026,
+    "headquarters": "San Francisco, California",
+    "numberOfLocations": 1,
+    "createdAt": "2026-05-23T10:40:09.750Z",
+    "updatedAt": "2026-05-23T10:40:09.750Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320ddc",
+    "brandName": "The Incredibly Amazing Artisan Handcrafted Gourmet Delicatessen and Fine Dining Experience",
+    "yearFounded": 2008,
+    "headquarters": "New York, New York",
+    "numberOfLocations": 12,
+    "createdAt": "2026-05-23T10:40:09.751Z",
+    "updatedAt": "2026-05-23T10:40:09.751Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320ddd",
+    "brandName": "Über Döner & Café™",
+    "yearFounded": 1999,
+    "headquarters": "Berlin, Germany",
+    "numberOfLocations": 250,
+    "createdAt": "2026-05-23T10:40:09.752Z",
+    "updatedAt": "2026-05-23T10:40:09.752Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320ddf",
+    "brandName": "Farm & Table Bistro",
+    "yearFounded": 2020,
+    "headquarters": "1234 Main Street, Suite 500, Portland, Oregon",
+    "numberOfLocations": 7,
+    "createdAt": "2026-05-23T10:40:09.753Z",
+    "updatedAt": "2026-05-23T10:40:09.753Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320de0",
+    "brandName": "Coastal Eats",
+    "yearFounded": 2018,
+    "headquarters": "Miami, Florida",
+    "numberOfLocations": 22,
+    "createdAt": "2026-05-23T10:40:09.754Z",
+    "updatedAt": "2026-05-23T10:40:09.754Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11840959693f14ff320de2",
+    "brandName": "مطعم النجمة الذهبية",
+    "yearFounded": 1987,
+    "headquarters": "القاهرة، مصر",
+    "numberOfLocations": 140,
+    "createdAt": "2026-05-23T10:40:09.755Z",
+    "updatedAt": "2026-05-23T10:40:09.755Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d59",
+    "brandName": "Sunrise Coffee Co.",
+    "yearFounded": 2015,
+    "headquarters": "Austin, Texas",
+    "numberOfLocations": 48,
+    "createdAt": "2026-05-23T10:41:03.869Z",
+    "updatedAt": "2026-05-23T10:41:03.869Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5a",
+    "brandName": "NovaBurger",
+    "yearFounded": 2026,
+    "headquarters": "San Francisco, California",
+    "numberOfLocations": 1,
+    "createdAt": "2026-05-23T10:41:03.879Z",
+    "updatedAt": "2026-05-23T10:41:03.879Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5b",
+    "brandName": "Heritage Bakehouse",
+    "yearFounded": 1980,
+    "headquarters": "London, England",
+    "numberOfLocations": 3,
+    "createdAt": "2026-05-23T10:41:03.880Z",
+    "updatedAt": "2026-05-23T10:41:03.880Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5c",
+    "brandName": "The Incredibly Amazing Artisan Handcrafted Gourmet Delicatessen and Fine Dining Experience",
+    "yearFounded": 2008,
+    "headquarters": "New York, New York",
+    "numberOfLocations": 12,
+    "createdAt": "2026-05-23T10:41:03.882Z",
+    "updatedAt": "2026-05-23T10:41:03.882Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5d",
+    "brandName": "Über Döner & Café™",
+    "yearFounded": 1999,
+    "headquarters": "Berlin, Germany",
+    "numberOfLocations": 250,
+    "createdAt": "2026-05-23T10:41:03.883Z",
+    "updatedAt": "2026-05-23T10:41:03.883Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5e",
+    "brandName": "MegaFood International",
+    "yearFounded": 1980,
+    "headquarters": "Chicago, Illinois",
+    "numberOfLocations": 35000,
+    "createdAt": "2026-05-23T10:41:03.884Z",
+    "updatedAt": "2026-05-23T10:41:03.884Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d5f",
+    "brandName": "Farm & Table Bistro",
+    "yearFounded": 2020,
+    "headquarters": "1234 Main Street, Suite 500, Portland, Oregon",
+    "numberOfLocations": 7,
+    "createdAt": "2026-05-23T10:41:03.885Z",
+    "updatedAt": "2026-05-23T10:41:03.885Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d60",
+    "brandName": "Coastal Eats",
+    "yearFounded": 2018,
+    "headquarters": "Miami, Florida",
+    "numberOfLocations": 22,
+    "createdAt": "2026-05-23T10:41:03.886Z",
+    "updatedAt": "2026-05-23T10:41:03.886Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d61",
+    "brandName": "Old World Provisions",
+    "yearFounded": 1980,
+    "headquarters": "Rome, Italy",
+    "numberOfLocations": 5,
+    "createdAt": "2026-05-23T10:41:03.887Z",
+    "updatedAt": "2026-05-23T10:41:03.887Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a11843fcee2f11efdd77d62",
+    "brandName": "مطعم النجمة الذهبية",
+    "yearFounded": 1987,
+    "headquarters": "القاهرة، مصر",
+    "numberOfLocations": 140,
+    "createdAt": "2026-05-23T10:41:03.888Z",
+    "updatedAt": "2026-05-23T10:41:03.888Z",
+    "__v": 0
+  }
+]

@@ -17,7 +17,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "brands": "npx ts-node -r tsconfig-paths/register src/modules/brands/cli.ts",
+    "brands:transform": "npm run brands -- brands:transform",
+    "brands:seed": "npm run brands -- brands:seed",
+    "brands:export": "npm run brands -- brands:export",
+    "brands:run-all": "npm run brands:transform && npm run brands:seed && npm run brands:export"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -30,6 +35,7 @@
     "class-validator": "^0.15.1",
     "joi": "^18.2.1",
     "mongoose": "^9.6.2",
+    "nest-commander": "^3.20.1",
     "nestjs-i18n": "^10.8.4",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"

@@ -1,0 +1,62 @@
+[
+  {
+    "brandName": "Sunrise Coffee Co.",
+    "yearFounded": 2015,
+    "headquarters": "Austin, Texas",
+    "numberOfLocations": 48
+  },
+  {
+    "brandName": "NovaBurger",
+    "yearFounded": 2026,
+    "headquarters": "San Francisco, California",
+    "numberOfLocations": 1
+  },
+  {
+    "brandName": "Heritage Bakehouse",
+    "yearFounded": 1980,
+    "headquarters": "London, England",
+    "numberOfLocations": 3
+  },
+  {
+    "brandName": "The Incredibly Amazing Artisan Handcrafted Gourmet Delicatessen and Fine Dining Experience",
+    "yearFounded": 2008,
+    "headquarters": "New York, New York",
+    "numberOfLocations": 12
+  },
+  {
+    "brandName": "Über Döner & Café™",
+    "yearFounded": 1999,
+    "headquarters": "Berlin, Germany",
+    "numberOfLocations": 250
+  },
+  {
+    "brandName": "MegaFood International",
+    "yearFounded": 1980,
+    "headquarters": "Chicago, Illinois",
+    "numberOfLocations": 35000
+  },
+  {
+    "brandName": "Farm & Table Bistro",
+    "yearFounded": 2020,
+    "headquarters": "1234 Main Street, Suite 500, Portland, Oregon",
+    "numberOfLocations": 7
+  },
+  {
+    "brandName": "   Coastal Eats   ",
+    "yearFounded": 2018,
+    "headquarters": "Miami, Florida",
+    "numberOfLocations": 22
+  },
+  {
+    "brandName": "Old World Provisions",
+    "yearFounded": 1980,
+    "headquarters": "Rome, Italy",
+    "numberOfLocations": 5
+  },
+  {
+    "brandName": "مطعم النجمة الذهبية",
+    "yearFounded": 1987,
+    "headquarters": "القاهرة، مصر",
+    "numberOfLocations": 140
+  }
+]
