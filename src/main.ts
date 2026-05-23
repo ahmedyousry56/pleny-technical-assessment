@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { I18nValidationPipe } from 'nestjs-i18n';
 import { ConfigurationsService } from './configurations/configurations.service';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { GlobalExceptionFilter } from './filters/global-exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -16,6 +17,8 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
+
+  app.useGlobalFilters(new GlobalExceptionFilter());
 
   const swaggerConfig = new DocumentBuilder()
     .setTitle(configurations.app.name)
