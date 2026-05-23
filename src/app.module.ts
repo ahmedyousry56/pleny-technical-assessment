@@ -5,6 +5,8 @@ import * as path from 'path';
 import { ConfigurationsService } from './configurations/configurations.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { RestaurantsModule } from './modules/restaurants/restaurants.module';
+import { UsersModule } from './modules/users/users.module';
+import { RecommendationsModule } from './modules/recommendations/recommendations.module';
 
 @Module({
   imports: [
@@ -32,6 +34,8 @@ import { RestaurantsModule } from './modules/restaurants/restaurants.module';
     }),
     ConfigurationsModule,
     RestaurantsModule,
+    UsersModule,
+    RecommendationsModule
   ],
   controllers: [],
   providers: [],
